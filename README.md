@@ -1,4 +1,4 @@
-# AjaxBindingWithCrud
+# Ajax Binding With Crud
 
 We can use Grid **dataSource** property to bind the datasource to Grid from external **AJAX** request. In the below code we have fetched the datasource from the server with the help of AJAX request and provided that to **dataSource** property by using onSuccess event of the ajax.
 
