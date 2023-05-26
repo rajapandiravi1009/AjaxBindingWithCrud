@@ -4,16 +4,16 @@ We can use Grid **dataSource** property to bind the datasource to Grid from exte
 
 ```
 <div>
-@Html.EJS().Button("btn").Content("Bind data via AJAX").CssClass("e-flat").Render()
+    @Html.EJS().Button("btn").Content("Bind data via AJAX").CssClass("e-flat").Render()
 
-@Html.EJS().Grid("Grid").EditSettings(e => { e.AllowAdding(true).AllowEditing(true).AllowDeleting(true); }).Columns(col =>
-{
-    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).Width("130").Add();
-    col.Field("EmployeeID").HeaderText("Employee ID").Width("150").Add();
-    col.Field("CustomerID").HeaderText("CustomerID").Width("70").Add();
-    col.Field("ShipCity").HeaderText("Ship City").Width("70").Add();
+    @Html.EJS().Grid("Grid").EditSettings(e => { e.AllowAdding(true).AllowEditing(true).AllowDeleting(true); }).Columns(col =>
+    {
+        col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).Width("130").Add();
+        col.Field("EmployeeID").HeaderText("Employee ID").Width("150").Add();
+        col.Field("CustomerID").HeaderText("CustomerID").Width("70").Add();
+        col.Field("ShipCity").HeaderText("Ship City").Width("70").Add();
 
-}).AllowPaging(true).AllowSorting(true).ActionComplete("actionComplete").ActionBegin("actionBegin").Toolbar(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" }).Render()
+    }).AllowPaging(true).AllowSorting(true).ActionComplete("actionComplete").ActionBegin("actionBegin").Toolbar(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" }).Render()
 
 </div>
 
@@ -29,7 +29,6 @@ We can use Grid **dataSource** property to bind the datasource to Grid from exte
     });
 </script>
 ```
-
 To perform the **CRUD** actions using **AJAX** here in the actionBegin event, we have cancel the default CRUD operations using arguments **cancel** property. Now you can dynamically call your server method using ajax along with the corresponding data received in the actionBegin event to update the data in your server. In ajax success event you can use the Grid’s endEdit and deleteRecord methods to add/edit and delete the corresponding data respectively in the Grid.
 
 This can be handled using a flag variable which is disabled in the actionComplete and ajax failure events so that it can enter the condition on next execution. This is demonstrated in the below code snippet,
@@ -40,7 +39,7 @@ This can be handled using a flag variable which is disabled in the actionComplet
     function actionBegin(e) {
         // Initially flag needs to be false in order to enter this condition
         if (!flag) {
-        var grid = document.getElementById('Grid').ej2_instances[0];
+            var grid = document.getElementById('Grid').ej2_instances[0];
             // Add and edit operations
             if (e.requestType == 'save' && (e.action == 'add')) {
                 var editedData = e.data;
