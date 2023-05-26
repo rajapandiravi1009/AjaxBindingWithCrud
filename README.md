@@ -131,6 +131,6 @@ This can be handled using a flag variable which is disabled in the actionComplet
 ### API Links:
 
   * https://ej2.syncfusion.com/documentation/api/grid/#actioncomplete
-  * https://ej2.syncfusion.com/react/documentation/api/grid/#endedit
-  * https://ej2.syncfusion.com/react/documentation/api/grid/#deleterecord
-  * https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin
+  * https://ej2.syncfusion.com/documentation/api/grid/#endedit
+  * https://ej2.syncfusion.com/documentation/api/grid/#deleterecord
+  * https://ej2.syncfusion.com/documentation/api/grid/#actionbegin
