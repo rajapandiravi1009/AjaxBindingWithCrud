@@ -129,7 +129,8 @@ This can be handled using a flag variable which is disabled in the actionComplet
 
 ### API Links:
 
-  * https://ej2.syncfusion.com/documentation/api/grid/#actioncomplete
+  * https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.grids.grid.html#Syncfusion_EJ2_Grids_Grid_ActionComplete
+  * https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.grids.grid.html#Syncfusion_EJ2_Grids_Grid_ActionBegin
   * https://ej2.syncfusion.com/documentation/api/grid/#endedit
   * https://ej2.syncfusion.com/documentation/api/grid/#deleterecord
-  * https://ej2.syncfusion.com/documentation/api/grid/#actionbegin
+ 
