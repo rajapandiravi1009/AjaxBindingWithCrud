@@ -1,4 +1,4 @@
-﻿using ajaxbindingwithcrud.Models;
+using ajaxbindingwithcrud.Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -51,36 +51,8 @@ namespace ajaxbindingwithcrud.Controllers
             return Json(data);
         }
 
-
-        public class Data
-        {
-
-            public bool requiresCounts { get; set; }
-            public int skip { get; set; }
-            public int take { get; set; }
-        }
-        public class CRUDModel<T> where T : class
-        {
-            public string action { get; set; }
-
-            public string table { get; set; }
-
-            public string keyColumn { get; set; }
-
-            public object key { get; set; }
-
-            public T value { get; set; }
-
-            public List<T> added { get; set; }
-
-            public List<T> changed { get; set; }
-
-            public List<T> deleted { get; set; }
-
-            public IDictionary<string, object> @params { get; set; }
-        }
     }
-        public class OrdersDetails
+    public class OrdersDetails
     {
         public OrdersDetails()
         {
