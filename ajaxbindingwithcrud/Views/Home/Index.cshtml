@@ -1,17 +1,17 @@
-﻿@{
+@{
     ViewBag.Title = "Handling Grid with CRUD using Ajax Request";
 }
 <div>
-@Html.EJS().Button("btn").Content("Bind data via AJAX").CssClass("e-flat").Render()
+    @Html.EJS().Button("btn").Content("Bind data via AJAX").CssClass("e-flat").Render()
 
-@Html.EJS().Grid("Grid").EditSettings(e => { e.AllowAdding(true).AllowEditing(true).AllowDeleting(true); }).Columns(col =>
-{
-    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).Width("130").Add();
-    col.Field("EmployeeID").HeaderText("Employee ID").Width("150").Add();
-    col.Field("CustomerID").HeaderText("CustomerID").Width("70").Add();
-    col.Field("ShipCity").HeaderText("Ship City").Width("70").Add();
+    @Html.EJS().Grid("Grid").EditSettings(e => { e.AllowAdding(true).AllowEditing(true).AllowDeleting(true); }).Columns(col =>
+    {
+        col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).Width("130").Add();
+        col.Field("EmployeeID").HeaderText("Employee ID").Width("150").Add();
+        col.Field("CustomerID").HeaderText("CustomerID").Width("70").Add();
+        col.Field("ShipCity").HeaderText("Ship City").Width("70").Add();
 
-}).AllowPaging(true).AllowSorting(true).ActionComplete("actionComplete").ActionBegin("actionBegin").Toolbar(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" }).Render()
+    }).AllowPaging(true).AllowSorting(true).ActionComplete("actionComplete").ActionBegin("actionBegin").Toolbar(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" }).Render()
 
 </div>
 
