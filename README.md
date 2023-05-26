@@ -40,6 +40,7 @@ This can be handled using a flag variable which is disabled in the actionComplet
     function actionBegin(e) {
         // Initially flag needs to be false in order to enter this condition
         if (!flag) {
+        var grid = document.getElementById('Grid').ej2_instances[0];
             // Add and edit operations
             if (e.requestType == 'save' && (e.action == 'add')) {
                 var editedData = e.data;
@@ -56,7 +57,6 @@ This can be handled using a flag variable which is disabled in the actionComplet
                     // Flag is enabled to skip this execution when grid ends add/edit
                     flag = true;
                     // The added/edited data will be saved in the Grid
-                    var grid = document.getElementById('Grid').ej2_instances[0];
                     grid.endEdit();
                 }
                 ajax.onFailure = (args) => {
@@ -81,7 +81,6 @@ This can be handled using a flag variable which is disabled in the actionComplet
                     // Flag is enabled to skip this execution when grid ends add/edit
                     flag = true;
                     // The added/edited data will be saved in the Grid
-                    var grid = document.getElementById('Grid').ej2_instances[0];
                     grid.endEdit();
                 }
                 ajax.onFailure = (args) => {
@@ -95,7 +94,6 @@ This can be handled using a flag variable which is disabled in the actionComplet
                 var editedData = e.data;
                 // The default delete operation is cancelled
                 e.cancel = true;
-                var grid = document.getElementById('Grid').ej2_instances[0];
                 // Here you can send the deleted data to your server using ajax call
                 var ajax = new ej.base.Ajax({
                     url: '/Home/Delete',
