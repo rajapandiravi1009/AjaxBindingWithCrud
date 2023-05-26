@@ -4,7 +4,7 @@ We can use Grid **dataSource** property to bind the datasource to Grid from exte
 
 ```
 <div>
-<button id="btn">Bind data via AJAX</button>
+@Html.EJS().Button("btn").Content("Bind data via AJAX").CssClass("e-flat").Render()
 
 @Html.EJS().Grid("Grid").EditSettings(e => { e.AllowAdding(true).AllowEditing(true).AllowDeleting(true); }).Columns(col =>
 {
