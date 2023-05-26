@@ -128,6 +128,8 @@ This can be handled using a flag variable which is disabled in the actionComplet
 </script>
 ```
 
+![](https://github.com/rajapandiravi1009/AjaxBindingWithCrud/blob/main/ezgif-5-a45c6cad66.gif)
+
 ### API Links:
 
   * https://ej2.syncfusion.com/documentation/api/grid/#actioncomplete
